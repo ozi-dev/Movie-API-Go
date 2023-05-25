@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	uri       = "mongodb+srv://ozi:1234@movie-details.attlleo.mongodb.net/?retryWrites=true&w=majority"
-	apiKey    = "f39f9577023aba77dc0ef52d2f157eec"
+	uri       = "mongodb+srv://<your info>@movie-details.attlleo.mongodb.net/?retryWrites=true&w=majority"
+	apiKey    = "<apikey>"
 	apiURL    = "https://api.themoviedb.org/3/movie"
 	apiBearer = "Bearer 1"
 )
