@@ -35,13 +35,11 @@ type Movie struct {
 }
 
 func main() {
-	// .env dosyasını yükle
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
 
-	// .env dosyasından değerleri al
 	uri = os.Getenv("URI")
 	apiKey = os.Getenv("API_KEY")
 	apiURL = os.Getenv("API_URL")
@@ -49,14 +47,11 @@ func main() {
 
 	e := echo.New()
 
-	// Middleware'leri ekle
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	// Endpoint'leri tanımla
 	e.GET("/movies", handleMoviesRequest)
 
-	// Sunucuyu başlat
 	if err := e.Start(":8000"); err != nil {
 		log.Fatal(err)
 	}
